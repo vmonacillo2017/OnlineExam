@@ -80,15 +80,16 @@
 </div>
 
 <div class="bg1">
-  <div class="container">
+  <div class="container-fluid">
 
-    <div style="background-color: rgba(255,255,255,0.8); text-align: center;"  class="col-2 text-truncate">
-      
+    <div style="background-color: rgba(255,255,255,0.8); text-align: center; padding: 25px; margin: 25px; border-radius: 25px;"  class="col-2 text-truncate">
       <h1>Welcome</h1>
       <h2>CNU Online Entrance Examination Portal</h2>
       <p class="text-justify">  This portal is created in order to serve the pulic for easy access on the entrance examination of Cebu Normal University. 
       Please ensure that all your requirements are submitted to the "Testing Center". This exam will test your IQ to qualify for enrolment of the course you applied for.
       Be sure to provide correct information in the registration form because this will be the basis for enrolment if you qualify. This examination requires you to finish within thirty (30) minutes. Good Luck!   </p>
+      
+      
     </div>
       
     </div>
@@ -162,9 +163,6 @@
 </form>
 </div><div class="col-md-3"></div></div>
       </div>
-      <!--<div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>-->
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
