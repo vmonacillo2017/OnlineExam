@@ -75,13 +75,13 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
         <li <?php if(@$_GET['q']==1) echo'class="active"'; ?>><a href="dash.php?q=1">User</a></li>
 		<li <?php if(@$_GET['q']==2) echo'class="active"'; ?>><a href="dash.php?q=2">Ranking</a></li>
 		<li <?php if(@$_GET['q']==3) echo'class="active"'; ?>><a href="dash.php?q=3">Feedback</a></li>
-        <li class="dropdown <?php if(@$_GET['q']==4 || @$_GET['q']==5 || @$_GET['q']==6 || @$_GET['q']==7) echo'active"'; ?>">
+        <li class="dropdown <?php if(@$_GET['q']==4 || @$_GET['q']==5 || @$_GET['q']==6) echo'active"'; ?>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examination<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="dash.php?q=4">Add Exam</a></li>
             <li><a href="dash.php?q=5">Remove Exam</a></li>
-            <li><a href="dash.php?q=6">Edit Exam</a></li>
-            <li><a href="dash.php?q=7">Upload Exam</a></li>
+            <li><a href="dash.php?q=6">Upload Exam</a></li>
+           
 			
           </ul>
         </li><li class="pull-right"> <a href="logout.php?q=account.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Log out</a></li>
@@ -116,8 +116,8 @@ if($rowcount == 0){
 }
 else
 {
-echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This exam is already done by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
-	<td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Retake</b></span></a></b></td></tr>';
+  echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This exam is already done by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+  <td><b><a class="pull-right btn sub1" style="margin:0px;background:#00FFFF"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Finished</b></span></a></b></td></tr>';
 }
 }
 $c=0;
@@ -226,7 +226,7 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
 if(@$_GET['q']==4 && !(@$_GET['step']) ) {
 echo ' 
 <div class="row">
-<span class="title1" style="margin-left:40%;font-size:30px;"><b>Enter Quiz Details</b></span><br /><br />
+<span class="title1" style="margin-left:40%;font-size:30px;"><b>Enter Exam Details</b></span><br /><br />
  <div class="col-md-3"></div><div class="col-md-6">   <form class="form-horizontal title1" name="form" action="update.php?q=addquiz"  method="POST">
 <fieldset>
 
@@ -235,7 +235,7 @@ echo '
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
-  <input id="name" name="name" placeholder="Enter Quiz title" class="form-control input-md" type="text">
+  <input id="name" name="name" placeholder="Enter Exam title" class="form-control input-md" type="text">
     
   </div>
 </div>
@@ -326,6 +326,7 @@ echo '
  
  for($i=1;$i<=@$_GET['n'];$i++)
  {
+echo ($i);
 echo '<b>Question number&nbsp;'.$i.'&nbsp;:</><br /><!-- Text input-->
 <div class="form-group">
   <label class="col-md-12 control-label" for="qns'.$i.' "></label>  
@@ -411,36 +412,7 @@ echo '</table></div></div>';
 
 }
 ?>
-<!-- edit exam -->
 
-<?php if(@$_GET['q']==6) {
-
-$result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
-echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
-<tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Max Point</b></td><td><b>Time limit</b></td><td></td></tr>';
-$c=1;
-while($row = mysqli_fetch_array($result)) {
-  $title = $row['title'];
-  $total = $row['total'];
-  $sahi = $row['sahi'];
-    $time = $row['time'];
-  $eid = $row['eid'];
-$q12=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error98');
-$rowcount=mysqli_num_rows($q12);  
-if($rowcount == 0){
-  echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
-  <td><b><a href="account.php?q=quiz&step=2&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Start</b></span></a></b></td></tr>';
-}
-else
-{
-echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
-  <td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Retake</b></span></a></b></td></tr>';
-}
-}
-$c=0;
-echo '</table></div></div>';
-
-}?>
 
 
 
