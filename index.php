@@ -119,7 +119,7 @@
       <p>Internet Explorer 9, Firefox 1, or Google Chrome are required to log into the exam</p>
 
       <h3>Support</h3>
-      <p>If you have any questions, please contact the Professional Education Department at 888-263-7265 or email ProfessionalEducation@TheAmericanCollege.edu. </p>
+      <p>If you have any questions, please contact the Testing Center Department at 032-254-1452 local 145 </p>
     </div>
       
     </div>
