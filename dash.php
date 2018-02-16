@@ -326,7 +326,7 @@ echo '
  
  for($i=1;$i<=@$_GET['n'];$i++)
  {
-echo ($i);
+
 echo '<b>Question number&nbsp;'.$i.'&nbsp;:</><br /><!-- Text input-->
 <div class="form-group">
   <label class="col-md-12 control-label" for="qns'.$i.' "></label>  
