@@ -21,7 +21,8 @@
   var dotpos = x.lastIndexOf(".");if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {alert("Not a valid e-mail address.");return false;}var a = document.forms["form"]["password"].value;if(a == null || a == ""){alert("Password must be filled out");return false;}if(a.length<5 || a.length>25){alert("Passwords must be 5 to 25 characters long.");return false;}
   var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords must match.");return false;}}
   </script>
-//user: admin@admin.com password: admin
+
+<!-- Administrator: admin@admin.com password: admin-->
 
 </head>
 
@@ -81,16 +82,44 @@
 
 <div class="bg1">
   <div class="container-fluid">
-
-    <div style="background-color: rgba(255,255,255,0.8); text-align: center; padding: 25px; margin: 25px; border-radius: 25px;"  class="col-2 text-truncate">
-      <h1>Welcome to the</h1>
-      <h2>CNU Online Entrance Examination Portal</h2>
-      <p class="text-justify">  This portal is created in order to serve the pulic for easy access on the entrance examination of Cebu Normal University. 
+    <style>  p{text-indent: 20px;} </style>
+   
+    <div style="background-color: rgba(255,255,255,0.8); text-align: left; padding: 25px; margin: 25px; border-radius: 25px;"  class="col-2 text-truncate">
+      <h1><strong>Welcome to the CNU Online Entrance Examination Portal!</strong></h1>
+      <p class="text-justify"> This portal is created in order to serve the pulic for easy access on the entrance examination of Cebu Normal University. 
       Please ensure that all your requirements are submitted to the "Testing Center". This exam will test your IQ to qualify for enrolment of the course you applied for.
-      Be sure to provide correct information in the registration form because this will be the basis for enrolment if you qualify. 
-      This examination requires you to finish within thirty (30) minutes. Good Luck!   <p Administration access: inside view source </p>
-      </p> 
-      
+      Be sure to provide correct information in the registration form because this will be the basis for enrolment if you qualify. This examination requires you to finish within thirty (30) minutes. Good Luck!    </p>
+      <h2>ONLINE EXAM INSTRUCTIONS</h2>
+      <h3>Steps For Accessing Your Exam Online:</h3>
+      <p class="text-justify"> 
+             
+             <ul>Close all programs, including email</ul>
+             <ul>Click on Register located on the lower right of the screen.(skip if already registered)</ul>
+             <ul>Click Log in located at the upper right corner of the screen.</ul>
+             <ul>Enter the Username and Password.</ul>
+             <ul>To begin the exam, click on the link to the appropriate exam listed under My Account.</ul>
+      </p>
+      <h3>Before starting the exam:</h3>
+      <h4>Please click register located on the lower right corner.</h4>
+      <h3>During the exam:</h3>
+      <p> <ul>The student may not use his or her textbook, course notes, or receive help from a proctor or any other outside source.</ul>
+          <ul>Students must complete the 50-question multiple-choice exam within the 75 minute time frame allotted for the exam.</ul>
+          <ul>Students must not stop the session and then return to it. This is especially important in the online environment where the system will "time-out" and not allow the student or you to reenter the exam site.</ul></p>
+      <h3>What to do if your online exam is interrupted</h3>
+      <p>
+          <ul>If your online exam is interrupted, click the “Back” button on your web browser to see if you can return to the exam. If not, follow the instructions below to resume taking the exam.</ul>
+          <p>Note: Answers are saved by the system in 10-minute intervals. If you have to log back in to complete your exam, your prior answers will be remain from the last system-save.
+            <ul>Reconnect to the Internet and log back into Blackboard.</ul>
+            <ul>Follow your original instructions to access the exam login page.</ul>
+            <ul>Ask your proctor to re-enter the Username and Password, then select the check box "Show list of unfinished exams, only select to re-enter an exam already in progress." This will enable you to resume taking the exam, close to the point before the interruption occurred.</ul>
+            <ul>Have your Proctor enter the Username and Password provided in the email from The College and click enter.</ul>
+          </p>
+      </p>
+      <h3>Minimum Browser Requirements</h3>
+      <p>Internet Explorer 9, Firefox 1, or Google Chrome are required to log into the exam</p>
+
+      <h3>Support</h3>
+      <p>If you have any questions, please contact the Professional Education Department at 888-263-7265 or email ProfessionalEducation@TheAmericanCollege.edu. </p>
     </div>
       
     </div>
