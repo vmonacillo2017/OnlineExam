@@ -105,8 +105,8 @@ if($rowcount == 0){
 }
 else
 {
-echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
-	<td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Retake</b></span></a></b></td></tr>';
+  echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This exam is already done by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+  <td><b><a class="pull-right btn sub1" style="margin:0px;background:#00FFFF"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Finished</b></span></a></b></td></tr>';
 }
 }
 $c=0;
@@ -199,7 +199,7 @@ if(@$_GET['q']== 2)
 $q=mysqli_query($con,"SELECT * FROM history WHERE email='$email' ORDER BY date DESC " )or die('Error197');
 echo  '<div class="panel title">
 <table class="table table-striped title1" >
-<tr style="color:red"><td><b>S.N.</b></td><td><b>Quiz</b></td><td><b>Question Solved</b></td><td><b>Right</b></td><td><b>Wrong<b></td><td><b>Score</b></td>';
+<tr style="color:red"><td><b>S.N.</b></td><td><b>Exam Taken</b></td><td><b>Questions Answered</b></td><td><b>Correct</b></td><td><b>Incorrect<b></td><td><b>Total Score</b></td>';
 $c=0;
 while($row=mysqli_fetch_array($q) )
 {
