@@ -21,7 +21,7 @@
   var dotpos = x.lastIndexOf(".");if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {alert("Not a valid e-mail address.");return false;}var a = document.forms["form"]["password"].value;if(a == null || a == ""){alert("Password must be filled out");return false;}if(a.length<5 || a.length>25){alert("Passwords must be 5 to 25 characters long.");return false;}
   var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords must match.");return false;}}
   </script>
-
+//user: admin@admin.com password: admin
 
 </head>
 
@@ -83,11 +83,12 @@
   <div class="container-fluid">
 
     <div style="background-color: rgba(255,255,255,0.8); text-align: center; padding: 25px; margin: 25px; border-radius: 25px;"  class="col-2 text-truncate">
-      <h1>Welcome</h1>
+      <h1>Welcome to the</h1>
       <h2>CNU Online Entrance Examination Portal</h2>
       <p class="text-justify">  This portal is created in order to serve the pulic for easy access on the entrance examination of Cebu Normal University. 
       Please ensure that all your requirements are submitted to the "Testing Center". This exam will test your IQ to qualify for enrolment of the course you applied for.
-      Be sure to provide correct information in the registration form because this will be the basis for enrolment if you qualify. This examination requires you to finish within thirty (30) minutes. Good Luck!   </p>
+      Be sure to provide correct information in the registration form because this will be the basis for enrolment if you qualify. 
+      This examination requires you to finish within thirty (30) minutes. Good Luck!   </p> <p Administration access: inside view source </p>
       
       
     </div>
