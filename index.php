@@ -88,8 +88,8 @@
       <p class="text-justify">  This portal is created in order to serve the pulic for easy access on the entrance examination of Cebu Normal University. 
       Please ensure that all your requirements are submitted to the "Testing Center". This exam will test your IQ to qualify for enrolment of the course you applied for.
       Be sure to provide correct information in the registration form because this will be the basis for enrolment if you qualify. 
-      This examination requires you to finish within thirty (30) minutes. Good Luck!   </p> <p Administration access: inside view source </p>
-      
+      This examination requires you to finish within thirty (30) minutes. Good Luck!   <p Administration access: inside view source </p>
+      </p> 
       
     </div>
       
